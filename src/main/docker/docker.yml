@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  app-morss:
+    image: pictuga/morss
+    container_name: zoomup-morss
+    ports:
+      - '8000:8000'
+  db-postgres:
+    image: postgres
+    container_name: zoomup-pgdb
+    environment:
+      POSTGRES_USER: App
+      POSTGRES_PASSWORD: password
+    ports:
+      - '5432:5432'
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: zoomup-pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: coucou@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: coucou
+    ports:
+      - '5050:80'

@@ -1,6 +1,6 @@
-package fr.coucou.feederz.repository;
+package fr.coucou.zoomup.repository;
 
-import fr.coucou.feederz.domain.Article;
+import fr.coucou.zoomup.domain.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,22 +1,23 @@
-package fr.coucou.feederz.domain;
+package fr.coucou.zoomup.domain;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @Table
-public class Article {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String title;
+    private String name;
 
-    @Column
-    private String resume;
+    @OneToMany(targetEntity= Source.class, mappedBy="category")
+    private List<Source> sources;
 }
