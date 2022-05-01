@@ -22,6 +22,7 @@ public class _User implements Serializable, UserDetails {
     private String username;
     private String password;
     private String token;
+    @OneToMany(targetEntity= Category.class, fetch=FetchType.LAZY)
     private List<Category> followed;
 
     @Override

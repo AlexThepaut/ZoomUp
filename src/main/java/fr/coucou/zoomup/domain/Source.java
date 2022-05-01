@@ -24,6 +24,6 @@ public class Source {
     @ManyToOne
     private Category category;
 
-    @OneToMany
+    @OneToMany(targetEntity= Article.class, fetch=FetchType.LAZY)
     private List<Article> articles;
 }

@@ -18,6 +18,6 @@ public class Category {
     @Column
     private String name;
 
-    @OneToMany(targetEntity= Source.class, mappedBy="category")
+    @OneToMany(targetEntity= Source.class, mappedBy="category", fetch=FetchType.LAZY)
     private List<Source> sources;
 }

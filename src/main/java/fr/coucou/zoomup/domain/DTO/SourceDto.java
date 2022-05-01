@@ -9,5 +9,5 @@ public class SourceDto {
     private String name;
     private String url;
     private Category category;
-    private List<Long> articles;
+    private List<ArticleDto> articles;
 }

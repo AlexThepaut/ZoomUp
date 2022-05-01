@@ -10,5 +10,5 @@ import java.util.List;
 public class CategoryDto {
     private Long id;
     private String name;
-    private List<Long> sources;
+    private List<CategoryDto> sources;
 }
